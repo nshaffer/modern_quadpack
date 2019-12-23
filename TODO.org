@@ -1,0 +1,17 @@
+- [-] Create wrapper subroutines with simpler calling sequences
+  - [X] QNG
+    - [X] N/A
+  - [ ] QAG
+    - [ ] refactor KEY flag magic numbers
+    - [ ] make IWORK and WORK optional & assumed-shape
+- [X] Implement examples in "doc" as tests of the legacy QUADPACK
+  - [X] QNG
+  - [X] QAG
+  - [X] QAGS
+  - [X] QAGP
+  - [X] QAGI
+  - [X] QAWO
+  - [X] QAWF
+  - [X] QAWS
+  - [X] QAWC
+- [ ] 

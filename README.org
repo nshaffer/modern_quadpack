@@ -1,0 +1,27 @@
+# Goals
+
+1. Provide QUADPACK as a module with explicit interfaces to the user-level routines and names for magic constants. No new functionality.
+2. Provide a module with high-level routines to simplify use of QUADPACK without impacting core functionality. Automate workspace array management and error handling. 
+
+Notion: some routines have pairs of parameters where one's meaning depends on the value of the other. E.g., in QAWO, the parameters `omega` and `integr` are used to represent weights of `sin(ωt)` or `cos(ωt)`, depending on the value of `integr`. A more modern take on this is to use polymorphism as
+
+	type, abstract :: qawo_weight
+	  real(wp) :: omega
+        end
+
+	type, extends(qawo_weight) :: sin_weight; end type
+	type, extends(qawo_weight) :: cos_weight; end type
+
+combined with a generic interface that dispatches to specific QAWO calls according to the type received. Using this kind of technique, it may be possible to compress all of QUADPACK's algorithms to one or two high-level generic interfaces.
+
+Notion: QUADPACK extensively uses output arguments to hold diagnostic information on the evaluation of the integral. I could make these optional, so that users only have to declare variables for them if they want that info. Another option is to bundle these diagnostics in a type, which the user can ask for as an out-parameterif they like. This is sort of what scipy does.
+
+
+
+# Build
+
+A simple `make` builds QUADPACK and example programs, the new interface modules, test programs for the interfaces, and the incomplete high-level module.
+
+`make clean` cleans everything but QUADPACK.
+
+`make deepclean` cleans everything, including QUADPACK
