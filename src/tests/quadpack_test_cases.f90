@@ -17,14 +17,14 @@ contains
 
     call qng(f, a, b, epsabs, epsrel, result, abserr, neval, ier)
 
-    print *, 'QNG integration of exp(x)/(x^2+1) from 0 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QNG integration of exp(x)/(x^2+1) from 0 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -58,14 +58,14 @@ contains
     call qag(f, a, b, epsabs, epsrel, key, result, abserr, neval, ier, & 
          limit, lenw, last, iwork, work)
 
-    print *, 'QAG integration of 2/(2+sin(10pi.x) from 0 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAG integration of 2/(2+sin(10pi.x) from 0 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -99,14 +99,14 @@ contains
     call qags(f, a, b, epsabs, epsrel, result, abserr, neval, ier, & 
          limit, lenw, last, iwork, work)
 
-    print *, 'QAGS integration of 1/sqrt(x) from 0 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAGS integration of 1/sqrt(x) from 0 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -142,14 +142,14 @@ contains
     call qagp(f, a, b, npts2, points, epsabs, epsrel, result, abserr, neval, ier, & 
          leniw, lenw, last, iwork, work)
 
-    print *, 'QAGP integration of |x-1/7|^(-1/4) |x-2/3|^(-11/20) from 0 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAGP integration of |x-1/7|^(-1/4) |x-2/3|^(-11/20) from 0 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -186,14 +186,14 @@ contains
     call qagi(f, boun, inf, epsabs, epsrel, result, abserr, neval, ier, & 
          limit, lenw, last, iwork, work)
 
-    print *, 'QAGI integration of sqrt(x)log(x)/((x+1)(x+2)) from 0 to +inf'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAGI integration of sqrt(x)log(x)/((x+1)(x+2)) from 0 to +inf'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -234,14 +234,14 @@ contains
     call qawo(f, a, b, omega, integr, epsabs, epsrel, result, abserr, neval, ier, & 
          leniw, maxp1, lenw, last, iwork, work)
 
-    print *, 'QAWO integration of exp(-x)log(x)cos(10.x) from 0 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAWO integration of exp(-x)log(x)cos(10.x) from 0 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -282,14 +282,14 @@ contains
     call qawf(f, a, omega, integr, epsabs, result, abserr, neval, ier, & 
          limlst, lst, leniw, maxp1, lenw, iwork, work)
 
-    print *, 'QAWF integration of sin(50.x)sin(8.x)/(x.sqrt(x)) from 0 to oo'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAWF integration of sin(50.x)sin(8.x)/(x.sqrt(x)) from 0 to oo'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -330,14 +330,14 @@ contains
     call qaws(f, a, b, alfa, beta, integr, epsabs, epsrel, result, &
          abserr, neval, ier, limit, lenw, last, iwork, work)
 
-    print *, 'QAWS integration of sin(10.x)/sqrt(x.(1-x)) from 0 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAWS integration of sin(10.x)/sqrt(x.(1-x)) from 0 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
@@ -375,14 +375,14 @@ contains
     call qawc(f, a, b, c, epsabs, epsrel, result, abserr, neval, ier, & 
          limit, lenw, last, iwork, work)
 
-    print *, 'QAWC integration of 1/(x^2 + 10^-4) 1/(x-0.5) from -1 to 1'
-    print *, 'Obtained result: ', result
-    print *, 'Expected result: ', ans
-    print *, 'Absolute error estimate: ', abserr
-    print *, 'Actual error: ', abs(result-ans)
-    print *, 'Required number of integrand evaluations: ', neval
-    print *, 'Exit status: ', ier
-    print *,
+    write (*, *) 'QAWC integration of 1/(x^2 + 10^-4) 1/(x-0.5) from -1 to 1'
+    write (*, *) 'Obtained result: ', result
+    write (*, *) 'Expected result: ', ans
+    write (*, *) 'Absolute error estimate: ', abserr
+    write (*, *) 'Actual error: ', abs(result-ans)
+    write (*, *) 'Required number of integrand evaluations: ', neval
+    write (*, *) 'Exit status: ', ier
+    write (*, *)
 
   contains
 
