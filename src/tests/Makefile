@@ -15,5 +15,6 @@ $(TARGET) : $(OBJS)
 	$(FC) -c $(FFLAGS) -o $@ $<
 
 clean :
+	$(RM) $(TARGET)
 	$(RM) $(OBJS)
 	$(RM) *.mod
