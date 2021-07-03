@@ -1,5 +1,5 @@
-FC = gfortran-8
-FFLAGS = -g -Og -std=f2008 -fcheck=all -ffpe-trap=invalid,zero,overflow
+FC = gfortran
+FFLAGS = -g -Og -std=f2018 -fcheck=all -ffpe-trap=invalid,zero,overflow
 
 LDLIBS = -lquadpack
 LDFLAGS = -L..

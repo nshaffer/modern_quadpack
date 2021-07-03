@@ -1,5 +1,5 @@
-FC = gfortran-8
-FFLAGS = -O2 -Wall -Wextra -std=f2008 -pedantic
+FC = gfortran
+FFLAGS = -O2 -Wall -Wextra -std=f2018 -pedantic
 LDLIBS = -LQUADPACK -lquadpack
 OBJS = $(patsubst %.f90, %.o, kinds.f90 $(wildcard *_interface.f90))
 

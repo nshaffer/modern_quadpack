@@ -1,4 +1,4 @@
-FC = gfortran-8
+FC = gfortran
 FFLAGS =-O2 -std=legacy
 ARFLAGS = -rcs
 
